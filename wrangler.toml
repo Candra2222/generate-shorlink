@@ -1,0 +1,16 @@
+name = "generate-shortlink"
+main = "src/index.js"
+compatibility_date = "2026-01-31"
+node_compat = true
+
+[vars]
+DOMAINS = "miuzy.web.id"
+ADMIN_KEY = "sesepuh17"
+
+# Jika pakai KV (uncomment setelah membuat KV di dashboard)
+# [[kv_namespaces]]
+# binding = "LINKS_DB"
+# id = "xxxxxxxxx" # Ganti dengan ID KV Anda
+
+[build]
+command = "npm install"
