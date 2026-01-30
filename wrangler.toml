@@ -8,9 +8,9 @@ DOMAINS = "miuzy.web.id"
 ADMIN_KEY = "sesepuh17"
 
 # Jika pakai KV (uncomment setelah membuat KV di dashboard)
-# [[kv_namespaces]]
-# binding = "LINKS_DB"
-# id = "xxxxxxxxx" # Ganti dengan ID KV Anda
+[[kv_namespaces]]
+binding = "LINKS_DB"
+id = "90ae7a273bd949fba48a2bb5d423e098" # Ganti dengan ID KV Anda
 
 [build]
 command = "npx wrangler"
