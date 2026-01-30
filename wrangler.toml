@@ -13,4 +13,4 @@ ADMIN_KEY = "sesepuh17"
 # id = "xxxxxxxxx" # Ganti dengan ID KV Anda
 
 [build]
-command = "npm install"
+command = "npx wrangler"
