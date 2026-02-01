@@ -294,33 +294,37 @@ function getRedirectHTML(url, uniqueCode) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
     <meta name="googlebot" content="noindex, nofollow">
-    <meta name="referrer" content="no-referrer">
     <meta http-equiv="refresh" content="1; url=${finalUrl}">
     <title>Loading...</title>
     <style>
         *{margin:0;padding:0;box-sizing:border-box}
-        body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(135deg, #667eea 0%, #764ba2 100%);display:flex;justify-content:center;align-items:center;min-height:100vh;overflow:hidden}
-        .loader-container{background:rgba(255,255,255,0.95);padding:40px;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,0.3);text-align:center;max-width:90%;width:400px;backdrop-filter:blur(10px)}
-        .loader{width:60px;height:60px;border:4px solid #f3f3f3;border-top:4px solid #667eea;border-radius:50%;animation:spin 1s linear infinite;margin:0 auto 20px}
-        @keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
-        h2{color:#333;font-size:24px;margin-bottom:10px;font-weight:600}
-        p{color:#666;font-size:14px;margin-bottom:20px}
-        .secure-badge{display:inline-flex;align-items:center;gap:8px;background:#e8f5e9;color:#2e7d32;padding:8px 16px;border-radius:20px;font-size:12px;font-weight:600}
-        .secure-badge::before{content:"";width:8px;height:8px;background:#4caf50;border-radius:50%;display:inline-block}
-        @media (max-width:480px){.loader-container{padding:30px 20px}h2{font-size:20px}}
+        body{
+            background:#f0f2f5;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            min-height:100vh;
+            font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+        }
+        .loader{
+            width:36px;
+            height:36px;
+            border:3px solid #e4e6eb;
+            border-top:3px solid #1877f2;
+            border-radius:50%;
+            animation:spin 1s linear infinite;
+        }
+        @keyframes spin{
+            0%{transform:rotate(0deg)}
+            100%{transform:rotate(360deg)}
+        }
     </style>
     <script>
-        setTimeout(()=>window.location.href="${finalUrl}",1000);
-        document.addEventListener('click',()=>window.location.href="${finalUrl}");
+        setTimeout(()=>window.location.href="${finalUrl}",1200);
     </script>
 </head>
 <body>
-    <div class="loader-container" onclick="window.location.href='${finalUrl}'">
-        <div class="loader"></div>
-        <h2>Please Wait</h2>
-        <p>You are being redirected to the destination page...</p>
-        <div class="secure-badge">Secure Connection</div>
-    </div>
+    <div class="loader"></div>
 </body>
 </html>`;
 }
